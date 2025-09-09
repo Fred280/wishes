@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Memories | Izzy's Birthday</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(
+          135deg,
+          #1a0a2e 0%,
+          #3a0a4e 50%,
+          #5a0a66 100%
+        );
+        font-family: "Poppins", sans-serif;
+        color: white;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .title {
+        font-size: 3rem;
+        background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #ff6b6b;
+        }
+        to {
+          text-shadow: 0 0 20px #ff8e53, 0 0 30px #ff6b6b;
+        }
+      }
+
+      .memory-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .memory-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        height: 280px;
+      }
+
+      .memory-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .memory-item:hover .memory-img {
+        transform: scale(1.1);
+      }
+
+      .memory-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        padding: 1rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .memory-item:hover .memory-caption {
+        transform: translateY(0);
+      }
+
+      .memory-date {
+        font-size: 0.9rem;
+        color: #ff6b6b;
+        margin-bottom: 0.3rem;
+      }
+
+      .memory-text {
+        font-size: 1rem;
+        color: white;
+      }
+
+      /* Stunning Next Button */
+      .next-btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 15px;
+        background: linear-gradient(45deg, #ff6b6b, #ff8e53, #f5d76e);
+        background-size: 200% 200%;
+        box-shadow: 0 5px 20px rgba(255, 107, 107, 0.6);
+        transition: all 0.4s ease;
+        animation: gradientMove 3s ease infinite;
+        margin: 3rem auto 0 auto;
+        display: block;
+        text-align: center;
+      }
+
+      .next-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 30px rgba(255, 107, 107, 0.8);
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="title">Sweet Memories</h1>
+        <p>A collection of our funniest and happiest moments together</p>
+      </div>
+
+      <div class="memory-grid">
+        <!-- Trio image added at the top -->
+        <div class="memory-item">
+          <img src="trio.jpg" alt="Trio Squad" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">September 2025</div>
+            <div class="memory-text">
+              When the dress code is ‘surprise me’ and everyone took it too
+              seriously 😂👔👖👞
+            </div>
+          </div>
+        </div>
+
+        <!-- Existing items -->
+        <div class="memory-item">
+          <img src="izzy 1.jpg" alt="Izzy Funny Face" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">August 2025</div>
+            <div class="memory-text">
+              That epic reaction we’ll never forget 😂
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 2.jpg" alt="Izzy Tribute" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">July 2025</div>
+            <div class="memory-text">That legendary edit moment ✨</div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 3.jpg" alt="Memory" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">April 2025</div>
+            <div class="memory-text">
+              That day at YIUS when Izzy was scarier than any horror movie 🎬😱
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 4.jpg" alt="Memory" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">May 2025</div>
+            <div class="memory-text">
+              The only student prepared for both swimming AND maths exam 💯👓
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 5.jpg" alt="Memory" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">June 2025</div>
+            <div class="memory-text">
+              That time I answered a call and got a free skincare tutorial
+              😂🧴💆‍♀️📞
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 6.jpg" alt="Memory" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">August 2025</div>
+            <div class="memory-text">
+              NASA still can’t explain this facial expression 🛸🤣
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 7.jpg" alt="Memory" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">May 2025</div>
+            <div class="memory-text">
+              End of semester 'smiles hiding all the exam trauma' 😂📖
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 9.jpg" alt="Memory" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">May 2025</div>
+            <div class="memory-text">
+              When you try to focus on the music but she’s stealing the show
+              😍🎸🤣
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 8.png" alt="Memory" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">June 2025</div>
+            <div class="memory-text">
+              That look you give when you’ve found your true soulmate (and it’s
+              in a bottle) 😂🍾🍷
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <video class="memory-img" autoplay loop muted playsinline>
+            <source src="izzy run.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="memory-caption">
+            <div class="memory-date">August 2025</div>
+            <div class="memory-text">
+              When you remember there’s homework due… 2x panic mode activated
+              📚💨😂
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <video class="memory-img" autoplay loop muted playsinline>
+            <source src="Izzy.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="memory-caption">
+            <div class="memory-date">June 2025</div>
+            <div class="memory-text">Some friends talk… Izzy BARKS 🐕💥😂</div>
+          </div>
+        </div>
+
+        <div class="memory-item">
+          <img src="izzy 10.png" alt="Memory" class="memory-img" />
+          <div class="memory-caption">
+            <div class="memory-date">May 2025</div>
+            <div class="memory-text">
+              When life hits you with unexpected chaos 😱😂🗣️
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stunning Continue Button -->
+      <a href="final.html" class="next-btn">✨ Continue the Adventure ✨</a>
+    </div>
+  </body>
+</html>
